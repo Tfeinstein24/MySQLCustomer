@@ -24,8 +24,8 @@ connection.connect(function(err) {
 connection.query('SELECT * FROM products',function(err,rows){
   if(err) throw err;
 
-  console.log('Data received from Db:\n');
+  console.log('Products Available:\n');
   console.log(rows);
 });
 
-//
+//Ask what product the user would like to buy
