@@ -19,3 +19,13 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) throw err;
 });
+
+// Display what products are available
+connection.query('SELECT * FROM products',function(err,rows){
+  if(err) throw err;
+
+  console.log('Data received from Db:\n');
+  console.log(rows);
+});
+
+//
