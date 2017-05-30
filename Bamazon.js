@@ -33,7 +33,7 @@ var start = function() {
   inquirer.prompt({
     name: "whatYouWant",
     type: "rawlist",
-    message: "Would you like to [POST] an auction or [BID] on an auction?",
+    message: "Which product ID do you want?",
     choices: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   }).then(function(answer) {
     // Second message should ask how many units
