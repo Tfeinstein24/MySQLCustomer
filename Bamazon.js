@@ -29,3 +29,24 @@ connection.query('SELECT * FROM products',function(err,rows){
 });
 
 //Ask what product the user would like to buy
+var start = function() {
+  inquirer.prompt({
+    name: "whatYouWant",
+    type: "rawlist",
+    message: "Would you like to [POST] an auction or [BID] on an auction?",
+    choices: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+  }).then(function(answer) {
+    // Second message should ask how many units
+    if (answer.whatYouWant.toUpperCase() === "POST") {
+      postAuction();
+    }
+    else {
+      bidAuction();
+    }
+  });
+  
+};
+// This will prompt user
+start();
+  console.log(start);
+//
