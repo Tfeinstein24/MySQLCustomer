@@ -37,8 +37,13 @@ var start = function() {
     choices: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   }).then(function(answer) {
     // Second message should ask how many units
-    if (answer.whatYouWant.toUpperCase() === "POST") {
-      postAuction();
+    if (answer.whatYouWant.toUpperCase() === "1", "2", "3", "4", "5", "6", "7", "8", "9", "10") {
+      inquirer.prompt({
+    name: "howMany",
+    type: "rawlist",
+    message: "How many do you want?",
+    choices: []
+  })
     }
     else {
       bidAuction();
